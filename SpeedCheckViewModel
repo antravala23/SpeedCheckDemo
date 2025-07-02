@@ -1,0 +1,21 @@
+class SpeedCheckViewModel(private val repository: SpeedCheckRepo, 
+                           private val firebaseService: CommunicationService,
+                           private val awsService: CommunicationService){
+    fun checkSpeed(){
+        val speed = repository.getSpeed()
+        val session = repository.getRenterData()
+        
+        println("Customer ID is: " + session.customerId)
+        println("Current Speed is: " + speed)
+        println("Speed Limit is: " + session.maxSpeed)
+        val service = when(session.communicationChannel){
+               CommunicationChannelType.FIREBASE -> firebaseService
+               CommunicationChannelType.AWS -> awsService
+           }
+        service.notifyUser(session.customerId, speed)
+        
+        if(speed > session.maxSpeed) {
+            SpeedAlertWarning.speedWarning(speed)
+        }
+    }
+}

@@ -1,0 +1,5 @@
+object SpeedAlertWarning{
+    fun speedWarning(speed: Int) {
+        println("ALERT: You are overspeeding: speed is " + speed + "km/h")
+    }
+}

@@ -1,0 +1,4 @@
+interface SpeedCheckRepo { 
+    fun getSpeed(): Int
+    fun getRenterData(): RenterData
+}

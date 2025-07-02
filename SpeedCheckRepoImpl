@@ -1,0 +1,11 @@
+class SpeedCheckRepoImpl: SpeedCheckRepo{
+    override fun getSpeed(): Int{
+        return SpeedSensorManager.getSpeed()
+    }
+    override fun getRenterData(): RenterData{
+        return RenterData(
+        customerId = "customer#111",
+        maxSpeed = 60,
+        communicationChannel = CommunicationChannelType.FIREBASE)
+    }
+}

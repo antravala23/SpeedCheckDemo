@@ -1,0 +1,6 @@
+class FirebaseService: CommunicationService{
+    // firebase API
+    override fun notifyUser(customerId: String, currentSpeed: Int){
+        println("Communication channel is: firebase")
+    }
+}

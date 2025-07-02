@@ -1,0 +1,3 @@
+interface CommunicationService{
+    fun notifyUser(customerId: String, currentSpeed: Int)
+}

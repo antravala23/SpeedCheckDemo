@@ -1,0 +1,6 @@
+class AWSService: CommunicationService{
+    // AWS API
+    override fun notifyUser(customerId: String, currentSpeed: Int){
+        println("Communication channel is: AWS")
+    }
+}

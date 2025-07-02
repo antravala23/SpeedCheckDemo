@@ -1,0 +1,5 @@
+object SpeedSensorManager {
+    fun getSpeed(): Int{
+        return 50 //get speed via CAN setup or HAL
+    }
+}

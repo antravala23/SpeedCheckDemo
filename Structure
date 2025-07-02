@@ -1,0 +1,21 @@
+com
+  -model
+    --RenterData
+    --CommunicationChannelType
+    
+  -data
+    --SpeedSensorManager
+    --repository
+      ---SpeedCheckRepo
+      ---SpeedCheckRepoImpl
+
+  -service
+    --CommunicationService
+    --FirebaseService
+    --AWSService
+    --SpeedAlertWarning
+
+  -viewmodel
+    --SpeedCheckViewModel
+
+  -MainActivity

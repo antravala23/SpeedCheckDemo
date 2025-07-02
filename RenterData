@@ -1,0 +1,5 @@
+data class RenterData (
+  val customerId: String,
+  val maxSpeed: Int,
+  val communicationChannel: CommunicationChannelType
+)
